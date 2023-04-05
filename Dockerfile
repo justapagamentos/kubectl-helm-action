@@ -5,12 +5,12 @@ RUN apk add --no-cache \
         py3-pip \
     && pip3 install --upgrade pip \
     && pip3 install \
-        awscli --upgrade pyyaml \
+        awscliv2 pyyaml \
     && rm -rf /var/cache/apk/*
 
-RUN aws --version   # Just to make sure its installed alright
+RUN awsv2 --version   # Just to make sure its installed alright
 
-RUN aws eks update-kubeconfig
+RUN awsv2 eks update-kubeconfig
     
 WORKDIR /app
 

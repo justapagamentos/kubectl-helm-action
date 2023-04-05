@@ -8,6 +8,12 @@ RUN apk add --no-cache \
     && pip3 install awscli --ignore-installed six \
     && rm -rf /var/cache/apk/*
 
+RUN chmod +x ./kubectl
+
+RUN mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$PATH:$HOME/bin
+
+RUN kubectl version --short --client
+
 RUN aws --version   # Just to make sure its installed alright
     
 WORKDIR /app

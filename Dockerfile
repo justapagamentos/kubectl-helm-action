@@ -10,7 +10,7 @@ RUN apk add --no-cache \
 
 RUN unzip awscliv2.zip
 
-RUN ./aws/install --bin-dir /usr/local/bin --install-dir /usr/local/aws-cli --update
+RUN ./usr/local/bin/aws/install --bin-dir /usr/local/bin --install-dir /usr/local/aws-cli --update
 
 RUN aws --version   # Just to make sure its installed alright
     

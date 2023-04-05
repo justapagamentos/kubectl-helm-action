@@ -5,6 +5,7 @@ RUN apk add --no-cache \
         py3-pip \
     && pip3 install --upgrade pip \
     && pip3 install pyyaml \
+    && pip3 install pipx \
     && pipx install git+https://github.com/aws/aws-cli.git@v2 \
     && rm -rf /var/cache/apk/*
 

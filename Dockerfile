@@ -4,13 +4,13 @@ RUN apk add --no-cache \
         python3 \
         py3-pip \
     && pip3 install --upgrade pip \
-    && pip3 install \
-        awscliv2 pyyaml \
+    && pip3 install pyyaml \
+    && pipx install git+https://github.com/aws/aws-cli.git@v2
     && rm -rf /var/cache/apk/*
 
-RUN awsv2 --version   # Just to make sure its installed alright
+RUN aws --version   # Just to make sure its installed alright
 
-RUN awsv2 eks update-kubeconfig
+RUN aws eks update-kubeconfig
     
 WORKDIR /app
 

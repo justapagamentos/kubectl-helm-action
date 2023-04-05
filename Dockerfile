@@ -5,7 +5,7 @@ RUN apk add --no-cache \
         py3-pip \
     && pip3 install --upgrade pip \
     && pip3 install pyyaml \
-    && pip3 install git+git://github.com/aws/aws-cli.git#2.0.0 \
+    && pip3 install awscli --upgrade --user \
     && rm -rf /var/cache/apk/*
 
 RUN aws --version   # Just to make sure its installed alright

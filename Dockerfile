@@ -14,7 +14,7 @@ RUN ./aws/install --bin-dir /usr/local/bin --install-dir /usr/local/aws-cli --up
 
 RUN aws --version   # Just to make sure its installed alright
 
-RUN aws eks update-kubeconfig --name jst-checkout-service
+RUN aws eks update-kubeconfig --name jst-checkout-service --region sa-east-1
     
 WORKDIR /app
 

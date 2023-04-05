@@ -4,7 +4,7 @@ RUN apk add --no-cache \
         python3 \
         py3-pip \
     && pip3 install --upgrade pip \
-    && pip3 install awscli pyyaml --force-reinstall \
+    && pip3 install awscli pyyaml --ignore-installed six --user \
     && rm -rf /var/cache/apk/*
 
 RUN aws --version   # Just to make sure its installed alright

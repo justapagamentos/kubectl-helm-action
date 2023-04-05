@@ -12,8 +12,6 @@ RUN unzip awscliv2.zip
 
 RUN ./aws/install
 
-RUN mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$PATH:$HOME/bin
-
 RUN aws --version   # Just to make sure its installed alright
 
 RUN aws eks update-kubeconfig

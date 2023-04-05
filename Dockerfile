@@ -9,8 +9,6 @@ RUN apk add --no-cache \
     && rm -rf /var/cache/apk/*
 
 RUN aws --version   # Just to make sure its installed alright
-
-RUN aws eks update-kubeconfig
     
 WORKDIR /app
 

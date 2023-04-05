@@ -12,7 +12,7 @@ RUN unzip awscliv2.zip
 
 RUN ./aws/install --bin-dir /usr/local/bin --install-dir /usr/local/aws-cli --update
 
-RUN aws --version   # Just to make sure its installed alright
+RUN /usr/local/bin/aws --version   # Just to make sure its installed alright
     
 WORKDIR /app
 

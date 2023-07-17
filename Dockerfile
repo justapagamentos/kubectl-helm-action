@@ -1,4 +1,4 @@
-FROM dtzar/helm-kubectl:3.12.1
+FROM dtzar/helm-kubectl:3.3.0
 
 RUN apk add --no-cache \
         python3 \
